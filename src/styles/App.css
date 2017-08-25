@@ -1,0 +1,22 @@
+.App {
+  margin: 10px;
+  width: 1040px;
+  margin: auto;
+}
+
+.card{
+  margin: 5px;
+}
+
+.form{
+  text-align: center;
+}
+
+h6 {
+	color: gray;
+}
+
+.specs {
+	padding-left: 5px;
+	padding-top: 10px;
+}
