@@ -12,6 +12,10 @@
   text-align: center;
 }
 
+#vec {
+	padding-top: 10px;
+}
+
 h6 {
 	color: gray;
 }
@@ -19,4 +23,40 @@ h6 {
 .specs {
 	padding-left: 5px;
 	padding-top: 10px;
+}
+
+.wrapper {
+	text-align: center;
+	margin-bottom: 20px;
+	background-color: white;
+	width: 1040px;
+	border-radius: 3px;
+}
+
+.header {
+	background-color: white;
+	width: 1040px;
+	height: 150px;
+	border-radius: 3px;
+	padding:20px;
+	margin-bottom: 20px;
+}
+
+#head {
+	border-bottom: #BFBBBB solid 1px;
+}
+
+fieldset {
+	width: 300px;
+	margin: auto;
+}
+
+.box {
+	display: block;
+	width: 270px;
+	margin: auto;
+}
+
+button {
+	margin: 10px 0px;
 }

@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import '../styles/App.css';
 
+
 class App extends Component {
   // PROPS AND STATE
   // Set props and state below.
@@ -35,6 +36,7 @@ class App extends Component {
   // Enter your code below:
 
   handleSubmit = (e) => {
+    e.preventDefault ()
       this.setState({
         pilot: this.state.value
       })
@@ -73,14 +75,30 @@ class App extends Component {
   render() {
     
     return (
-      <div className="App" style={{display:'flex', flexWrap:'wrap', justifyContent:'space-between'}}>
-        <form
+      <div className="App" >
+        <div className="header">
+          <h1 id="head"> STAR WARS</h1>
+          <h6 id="vec"> The vehicles of Star Wars </h6>
+        </div>
+        <div className="wrapper">
+          <form onSubmit={this.handleSubmit}>
+            <fieldset>
+              <legend> What is Your Name, Pilot? </legend>
+                <div className="form_area">
+                  <input className="box" onChange={this.handleNameChange} type="text" placeholder="Enter Name"name="pilot" width="300px" value={this.state.value} />
+                  <button type="submit" className="btn btn-primary">Submit</button>
+                </div>
+              <h3>{this.state.pilot}</h3>
+            </fieldset>
+          </form>
+        </div>
         {
         /*
         The App component needs the following:
          jumbotron section, form section, vehicle cards section.
          Your form will also need a header in which you will pass the state of the form upon submit.
          */}
+         <div style={{display:'flex', flexWrap:'wrap', justifyContent:'space-between'}}>
          {this.state.vehicles.map(function(vehicle, i){
           return (
             <div key={'vehicle' + i} className="card" style={{width: '20rem'}}>
@@ -103,6 +121,7 @@ class App extends Component {
             </div>
           )
          })}
+        </div>
       </div>
     );
   }
